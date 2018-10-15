@@ -51,7 +51,7 @@ nav .logo {
   font-family: 'Source Serif Pro', serif;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 0 60px 0 25px;
+  padding: 0 52px 0 25px;
 }
 
 nav .tabs {
@@ -275,13 +275,13 @@ section.content .call-to-action button {
 /* Featured applications start */
 section.content .featured-application {
   margin-top: -16px;
-  font-size: 0.9rem;
   font-weight: 600;
 }
 
 section.content .featured-application .bar {
   display: flex;
   justify-content: space-between;
+  font-size: 0.8rem;
 }
 
 section.content .featured-application .bar div:nth-child(1) {
@@ -303,11 +303,381 @@ section.content .featured-application .bar div:nth-child(2) {
   color: var(--text-grey);
 }
 
+section.content .featured-application .applications-wrapper {
+  margin-top: 22px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+section.content .featured-application .applications-wrapper .application {
+  flex-grow: 1;
+  border: 7px solid;
+  padding: 10px;
+}
+.applications-wrapper .application + .application {
+  margin-left: 10px;
+}
+
+section.content
+  .featured-application
+  .applications-wrapper
+  .application:nth-child(1) {
+  border-image: url(../images/pink.jpeg);
+  border-image-slice: 11;
+}
+
+section.content
+  .featured-application
+  .applications-wrapper
+  .application:nth-child(2) {
+  border-image: url(../images/red.jpeg);
+  border-image-slice: 11;
+}
+
+section.content
+  .featured-application
+  .applications-wrapper
+  .application:nth-child(3) {
+  border-image: url(../images/gold.jpeg);
+  border-image-slice: 11;
+}
+
+section.content .featured-application .application .author {
+  display: flex;
+  align-items: center;
+}
+
+section.content .featured-application .application .author img {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+section.content .featured-application .application .description {
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  font-weight: 100;
+  margin-top: 24px;
+  border-top: 1px solid var(--light-grey);
+  padding-top: 15px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+section.content .featured-application .application .stats {
+  font-size: 0.9rem;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 32px;
+  padding-top: 18px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+section.content .featured-application .application .follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+section.content .featured-application .application .follow button {
+  background: transparent;
+  color: hsl(135, 38%, 55%);
+  padding: 5px 15px;
+  border-radius: 23px;
+  font-size: 1.1rem;
+  border: 1px solid hsla(135, 38%, 55%, 0.51);
+}
+
+/* friends following */
+section.content .following {
+  background-image: url(../images/mountain.jpg);
+  background-size: cover;
+}
+
+section.content .following .wrapper {
+  margin: 50px 170px 34px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section.content .following .title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-gey);
+  border-top: 1px solid var(--light-grey);
+  padding-top: 10px;
+  position: relative;
+}
+
+section.content .following .title:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 26ch;
+  height: 1px;
+  box-shadow: 0px 1px var(--dark-gey);
+}
+section.content .following .cards-wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+section.content .following .cards {
+  background: #fff;
+  padding: 17px;
+  font-size: 0.9rem;
+  position: relative;
+}
+section.content .following .cards > span {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: var(--light-grey);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--grey);
+  border-radius: 50%;
+}
+section.content .following .cards + .cards {
+  margin-left: 20px;
+}
+
+section.content .following .cards .author {
+  display: flex;
+  align-items: center;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+section.content .following .cards .author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+section.content .following .cards .author > div {
+  padding-left: 20px;
+}
+
+section.content .following .cards .followers {
+  padding: 20px 0;
+}
+
+section.content .following .cards .last-story {
+  line-height: 1.2;
+  padding: 10px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+section.content .following .cards .last-story span {
+  font-size: 0.8rem;
+  color: var(--text-grey);
+}
+
+section.content .following .cards .follow {
+  display: flex;
+  padding-top: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+section.content .following .cards .follow button {
+  background: transparent;
+  color: hsl(135, 38%, 55%);
+  padding: 5px 15px;
+  border-radius: 23px;
+  font-size: 1.1rem;
+  border: 1px solid hsla(135, 38%, 55%, 0.51);
+}
+
 aside {
-  background-color: #fdfdfd;
+  background-color: hsl(0, 0%, 98%);
   min-height: calc(100vh - 50px);
   border-left: 1px solid var(--light-grey);
   flex-basis: 377px;
+}
+
+aside .top-stories {
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+aside .top-stories .title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding-top: 10px;
+  border-top: 1px solid var(--light-grey);
+  position: relative;
+}
+
+aside .top-stories .title:before {
+  content: '';
+  height: 1px;
+  width: 10ch;
+  box-shadow: 0 1px var(--text-grey);
+  position: absolute;
+  top: -2px;
+}
+
+aside .top-stories .stories {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  counter-reset: stories;
+}
+
+aside .top-stories .stories li {
+  margin-left: 66px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 17px;
+  margin-top: 17px;
+}
+
+aside .top-stories .stories li:before {
+  counter-increment: stories;
+  content: counter(stories);
+  position: absolute;
+  left: -51px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid var(--light-grey);
+  border-radius: 50%;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside .top-stories .stories li .author {
+  color: var(--text-grey);
+  padding-top: 4px;
+}
+
+aside .featured-writer {
+  background-image: url(../images/obama.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+aside .featured-writer .content span {
+  font-size: 0.8rem;
+}
+
+aside .featured-writer .content button {
+  background: transparent;
+  color: hsl(135, 38%, 55%);
+  padding: 5px 15px;
+  border-radius: 23px;
+  font-size: 1.1rem;
+  border: 1px solid hsla(135, 38%, 55%, 0.51);
+}
+
+/* Bookmarks */
+
+aside .top-bookmarks {
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 21px;
+}
+
+aside .top-bookmarks .title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding-top: 10px;
+  border-top: 1px solid var(--light-grey);
+  position: relative;
+}
+
+aside .top-bookmarks .title:before {
+  content: '';
+  height: 1px;
+  width: 10ch;
+  box-shadow: 0 1px var(--text-grey);
+  position: absolute;
+  top: -2px;
+}
+
+aside .top-bookmarks .bookmarks {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+aside .top-bookmarks .bookmarks li {
+  margin-left: 66px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 17px;
+  margin-top: 17px;
+}
+
+aside .top-bookmarks .bookmarks li:before {
+  content: '';
+  background-image: url(../images/bookmark-small-green.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  left: -51px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--light-grey);
+  border-radius: 50%;
+}
+
+aside .top-bookmarks .bookmarks li:after {
+  content: '';
+  left: -51px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--light-grey);
+  position: absolute;
+  border-top-color: #78c28a;
+  border-right-color: #78c28a;
+  border-radius: 50%;
+  transform: rotate(36deg);
+}
+
+aside .top-bookmarks .bookmarks li.no-progress:after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+aside .top-bookmarks .bookmarks li.quadro:after {
+  border-right-color: transparent;
+}
+
+aside .top-bookmarks .bookmarks li .author {
+  color: var(--text-grey);
+  padding-top: 4px;
+}
+
+aside .footer {
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: space-around;
+  color: var(--grey);
 }
 
 /* utility classes */
@@ -350,4 +720,8 @@ h1 {
 
 .no-border {
   border: none !important;
+}
+
+.grey-text {
+  color: var(--text-grey);
 }
